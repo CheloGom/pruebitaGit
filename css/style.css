@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* css home*/
+body{
+    background-color: #94B49F;
+}
+
+/* estilos de header*/
+header{
+    height: 85px;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: #E5E3C9
+}
+
+header h1{
+    text-align: center;
+    color: whitesmoke ;
+    font-size: 45px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline;
+}
+
+/* estilos del menu */
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    background-color: #B4CFB0;
+}
+
+nav ul li{
+    background-color: whitesmoke;
+    border-radius: 0.5rem ;
+    padding: 0.3rem;
+    
+}
+nav ul li a{
+    text-decoration: none;
+}
+
+
+.main{
+    display: grid;
+    grid-template-areas:"tituloMain tituloMain"
+                        "parrafo parrafo";
+
+}
+.tituloMain{
+    grid-area: tituloMain;
+    text-align: center;
+}
+
+
+
+.parrafo{
+    grid-area: parrafo;
+    text-align: center;
+}
+
+.imagen{
+    display: none;
+    justify-content: center;
+
+}
+
+.footer{
+    margin: 1px;
+    text-align: center;
+}
+
+
+@media screen and (min-width:600px) {
+    .imagen{
+        display: block;
+    }
+    
+
+    .main{
+        grid-template-areas: "tituloMain tituloMain tituloMain"
+                             "parrafo parrafo parrafo"
+                             "imagen imagen imagen";
+        justify-content: center;
+        justify-items: center;
+    }
+    .tituloMain{
+        grid-area: tituloMain;
+    }
+    .parrafo{
+        grid-area: parrafo;
+    }
+    .imagen{
+        grid-area: imagen;
+    }
+}
+
+
+@media screen and (min-width:1024px){
+    
+    .main{
+        grid-template-areas:"tituloMain tituloMain tituloMain tituloMain"
+                            "parrafo parrafo parrafo imagen"
+                            "parrafo parrafo parrafo imagen";
+        justify-items: center;
+        align-items: center;
+        }
+
+        .tituloMain{
+            grid-area: tituloMain;
+        }
+        .parrafo{
+            grid-area: parrafo;
+        }
+        .imagen{
+            grid-area: imagen;
+        }
+}
+
+/* css campañas*/
+
+.campanias{
+    display: grid;
+    grid-template-areas:"info info";
+}
+
+.subCampanias{
+    text-align: center;
+    text-decoration: underline;
+}
+.info{
+    grid-area: info;
+}
+
+
+.imagenEnero{
+   display: none;
+}
+
+.imagenFebrero{
+    display: none;
+}
+
+.imagenMarzo{
+    display: none;
+}
+
+.imagenAbril{
+    display: none;
+}
+
+
+.tituloP{
+    text-align: center;
+}
+
+.pCampanias{
+    text-align: center;
+}
+
+@media screen and (min-width:600px){
+    .campanias{
+        justify-items: center;
+        display: grid;
+        grid-template-areas:"info info info"
+                            "imagenEnero imagenEnero imagenEnero "
+                            "imagenFebrero imagenFebrero imagenFebrero"
+                            "imagenMarzo imagenMarzo imagenMarzo" 
+                            "imagenAbril imagenAbril imagenAbril";
+    }
+.info{
+    grid-area: info;
+}
+
+.imagenEnero{
+    display: block;
+    grid-area: imagenEnero;
+}
+
+.imagenFebrero{
+    display: block;
+    grid-area: imagenFebrero;
+}
+
+.imagenMarzo{
+    display: block;
+    grid-area: imagenMarzo;
+}
+
+.imagenAbril{
+    display: block;
+    grid-area: imagenAbril;
+}
+}
+
+@media screen and (min-width:1024px){
+    .campanias{
+        justify-items: center;
+        display: grid;
+        grid-template-areas:"info info imagenEnero imagenEnero "
+                            "info info imagenFebrero imagenFebrero"
+                            "info info imagenMarzo imagenMarzo" 
+                            "info info imagenAbril imagenAbril";
+    }
+
+    .info{
+        grid-area: info;
+    }
+    
+    .imagenEnero{
+        display: block;
+        grid-area: imagenEnero;
+    }
+    
+    .imagenFebrero{
+        display: block;
+        grid-area: imagenFebrero;
+    }
+    
+    .imagenMarzo{
+        display: block;
+        grid-area: imagenMarzo;
+    }
+    
+    .imagenAbril{
+        display: block;
+        grid-area: imagenAbril;
+    }
+}
+
+/* css nosotros*/
+
+.nosotros{
+display: grid;
+grid-template-areas: "sobreNosotros sobreNosotros"
+                     "video viedeo"
+                    "yTube yTube";
+}                    
+
+.tituloSobre{
+    text-align: center;
+}
+
+.pNosotros{
+    display: none;
+}
+
+.video{
+    grid-area: video;
+}
+
+.yTube{
+    grid-area: yTube;
+    text-align: center;
+}
+.sobreNosotros{
+    justify-items: center;
+    display: none;
+}
+
+
+
+@media screen and (min-width:600px){
+    .nosotros{
+        justify-items: center;
+        display: grid;
+        grid-template-areas: "tituloSobre tituloSobre tituloSobre"
+                             "pNosotros pNosotros pNosotros"
+                             "video video video"
+                             "yTube yTube yTube";
+    }                       
+    
+    .tituloSobre{
+        text-align: center;
+        grid-area: tituloSobre;
+    }
+
+    .sobreNosotros{
+        text-align: center;
+    }
+
+    .video{
+        grid-area: video;
+        
+    }
+
+    .yTube{
+        grid-area: yTube;
+    }
+
+    .pNosotros{
+        display: block;
+        text-align: center;
+        grid-area: pNosotros;
+    }
+
+
+}
+
+@media screen and (min-width:1024px){
+    .nosotros{
+        display: grid;
+        grid-template-areas:
+                             "tituloSobre tituloSobre tituloSobre tituloSobre"
+                             "pNosotros pNosotros video video"
+                             "pNosotros pNosotros video video"
+                             "yTube yTube yTube yTube";
+    }                       
+    
+    .tituloSobre{
+        text-align: center;
+        grid-area: tituloSobre;
+    }
+
+    .sobreNosotros{
+        text-align: center;
+    }
+
+    .video{
+        grid-area: video;
+        
+    }
+
+    .yTube{
+        grid-area: yTube;
+    }
+
+    .pNosotros{
+        display: block;
+        text-align: center;
+        grid-area: pNosotros;
+    }
+}
+
+/* css productos*/
+
+.productos{
+    justify-items: center;
+    display: grid;
+    grid-template-areas: "subProductos subProductos"
+                        "pProductos pProductos"
+                        "imagenVela imagenVela"
+                        "imagenSahumerios imagenSahumerios"
+                        "imagenDifusores imagenDifusores"
+                        "imagenOtros imagenOtros";
+}
+
+.subProductos{
+    grid-area: subProductos;
+    text-align: center;
+}
+.pProductos{
+    display: none;
+    grid-area: pProductos;
+    text-align: center;
+}
+
+.imagenVela{
+    grid-area: imagenVela;
+}
+
+.imagenSahumerios{
+    grid-area: imagenSahumerios;
+}
+
+.imagenDifusores{
+    grid-area: imagenDifusores;
+}
+
+.imagenOtros{
+    grid-area: imagenOtros;
+}
+
+@media screen and (min-width:600px){
+    
+    .productos{
+        justify-items: center;
+    display: grid;
+    grid-template-areas: "subProductos subProductos subProductos"
+                        "pProductos pProductos pProductos"
+                        "imagenVela imagenVela imagenVela" 
+                        "imagenSahumerios imagenSahumerios imagenSahumerios"
+                        "imagenDifusores imagenDifusores imagenDifusores"
+                        "imagenOtros imagenOtros imagenOtros";
+}
+
+.subProductos{
+    grid-area: subProductos;
+    text-align: center;
+}
+.pProductos{
+    display: block;
+    grid-area: pProductos;
+    text-align: center;
+}
+
+.imagenVela{
+    grid-area: imagenVela;
+}
+
+.imagenSahumerios{
+    grid-area: imagenSahumerios;
+}
+
+.imagenDifusores{
+    grid-area: imagenDifusores;
+}
+
+.imagenOtros{
+    grid-area: imagenOtros;
+}
+
+}
+
+@media screen and (min-width:1024px){
+    .productos{
+        justify-items: center;
+    display: grid;
+    grid-template-areas: "subProductos subProductos subProductos subProductos"
+                        "imagenVela imagenVela pProductos pProductos"
+                         
+                        "imagenSahumerios imagenSahumerios pProductos pProductos"
+                        "imagenDifusores imagenDifusores pProductos pProductos"
+                        "imagenOtros imagenOtros pProductos pProductos";
+}
+
+.subProductos{
+    grid-area: subProductos;
+    text-align: center;
+}
+.pProductos{
+    display: block;
+    grid-area: pProductos;
+    text-align: center;
+}
+
+.imagenVela{
+    grid-area: imagenVela;
+}
+
+.imagenSahumerios{
+    grid-area: imagenSahumerios;
+}
+
+.imagenDifusores{
+    grid-area: imagenDifusores;
+}
+
+.imagenOtros{
+    grid-area: imagenOtros;
+}
+
+}
